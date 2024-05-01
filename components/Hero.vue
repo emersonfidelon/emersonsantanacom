@@ -3,13 +3,13 @@ import { Linkedin, Instagram, Mail } from 'lucide-vue-next'
 </script>
 
 <template>
-  <div class="bg-[#171023] shadow-sm text-white h-screen area">
-    <div class="container grid grid-cols-1 md:grid-cols-2 px-8 py-10 h-full">
-      <div class="inline-flex flex-col justify-center w-full md:pl-20">
-        <h4 class="my-name font-[Kalam] text-5xl md:text-6xl mb-3">Emerson Santana</h4>
-        <spam class=" text-neutral-100 text-lg md:text-2xl font-medium font-['Heebo'] leading-loose">
+  <div class="inline-flex justify-center itens-center bg-transparent h-full w-full absolute shadow-sm text-white z-10">
+    <div class="container inline-flex flex-col-reverse md:flex-row md:gap-20 gap-10 w-3/4 h-full py-10">
+      <div class="inline-flex flex-col justify-center md:my-0 max-w-3xl">
+        <h4 class="my-name font-[Kalam] text-4xl md:text-6xl">Emerson Santana</h4>
+        <span class=" text-neutral-100 text-sm mb-5 md:text-2xl font-medium font-['Heebo'] leading-loose">
           Desenvolvedor FullStack a +13 anos | CTO
-        </spam>
+        </span>
         <p class=" text-neutral-400 text-base font-normal font-['Heebo'] leading-normal">
           Atuo como desenvolvedor full-stack a mais de 13 anos, com experiência em diversas tecnologias, linguagens e projetos como Sites, Apps iOS, Apps Android, Sistemas Web, DevOps, Testes Automatizados, Gestão de times ágeis, Gestão de projetos, Big Data, Marketing Digital, UX, UI.
         </p>
@@ -30,14 +30,15 @@ import { Linkedin, Instagram, Mail } from 'lucide-vue-next'
 
         </div>
       </div>
-      <div class="inline-flex flex-col justify-center items-center w-full">
+      <div class="inline-flex justify-center items-center md:justify-end w-full">
         <img 
           src="https://avatars.githubusercontent.com/emersonfidelon" 
-          alt="Emerson Santana" class="rounded-3xl w-full md:w-80" 
+          alt="Emerson Santana" class="rounded-3xl w-full sm:w-[90%] md:w-80" 
         />
       </div>
     </div>
-
+  </div>
+  <div class="area bg-[#171023]">
     <div class="glowing">
       <span style="--i:1;"></span>
       <span style="--i:2;"></span>
@@ -67,6 +68,15 @@ import { Linkedin, Instagram, Mail } from 'lucide-vue-next'
 <style scoped>
 .area {
   overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .my-name {
   background: linear-gradient(90deg, #9955E8 0%, #7BFFAF 100%);
@@ -78,7 +88,7 @@ import { Linkedin, Instagram, Mail } from 'lucide-vue-next'
   .glowing {
     position: relative;
     min-width: 700px;
-    height: 550px;
+    height: 100%;
     margin: -150px;
     transform-origin: right;
     animation: colorChange 5s linear infinite;
